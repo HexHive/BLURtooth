@@ -1,11 +1,26 @@
-# BLURtooth (BLUR Attacks)
-
 ## TL;DR
 
+BLURtooth (the BLUR attacks) exploits the lack of cross-transport key
+validation, allowing an attacker to bypass Bluetooth Classic and Bluetooth Low
+Energy security mechanisms.
+
 Bluetooth's cross-transport key derivation (CTKD) is vulnerable to attacks
-enabling to attack Bluetooth Classic (from Bluetooth Low Energy and vice versa.
-A remote attacker in Bluetooth range to impersonate, man-in-the-middle, and
+enabling to attack Bluetooth Classic from Bluetooth Low Energy and vice versa.
+A remote attacker in Bluetooth range may impersonate, man-in-the-middle, and
 establish malicious sessions with arbitrary devices.
+
+* ***Security Impact:*** device impersonation, man-in-the-middle, malicious
+  session establishment with arbitrary devices
+* ***Affected Devices:*** the attack is standard compliant, so all BT/BLE
+  devices supporting CTKD are likely vulnerable; all our tested devices are
+  vulnerable
+* BLURtooth is tracked under [CVE-2020-15802](https://kb.cert.org/vuls/id/589825)
+* ***Credit:*** Daniele Antonioli and Mathias Payer
+  from École Polytechnique Fédérale de Lausanne (EPFL),
+  Nils Ole Tippenhauer from Helmholtz Center for Information Security (CISPA),
+  and Kasper Rasmussen from University of Oxford.
+* ***Contacts at EPFL:***
+  [Daniele Antonioli and Mathias Payer](mailto:daniele.antonioli@epfl.ch,mathias.payer@nebelwelt.net)
 
 
 ## Summary
@@ -30,7 +45,8 @@ The team behind this work consists of
 [Daniele Antonioli](https://francozappa.github.io/)
 and
 [Mathias Payer](https://nebelwelt.net/)
-from École Polytechnique Fédérale de Lausanne (EPFL),
+from the [HexHive group](https://hexhive.epfl.ch) at
+École Polytechnique Fédérale de Lausanne (EPFL),
 [Nils Ole Tippenhauer](https://tippenhauer.de/)
 from Helmholtz Center for Information Security (CISPA), and
 [Kasper Rasmussen](https://www.cs.ox.ac.uk/people/kasper.rasmussen/)
