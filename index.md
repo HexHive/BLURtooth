@@ -1,4 +1,4 @@
-## TL;DR
+## BLUR attacks
 
 BLURtooth (the BLUR attacks) exploits the lack of cross-transport key
 validation, allowing an attacker to bypass Bluetooth Classic and Bluetooth Low
@@ -137,5 +137,5 @@ attacks on actual devices.  The Bluetooth SIG suggested that version 5.1 of the
 standard will contain guidelines to mitigate the BLUR attacks (e.g., disable key
 overwrites in certain circumstances as proposed in our countermeasures), but
 such guidelines are not (yet) public and we cannot comment on them.  The
-Bluetooth SIG provides a [public statement on the BLUR
+Bluetooth SIG provides a [public statement about BLURtooth and the BLUR
 attacks](https://www.bluetooth.com/learn-about-bluetooth/bluetooth-technology/bluetooth-security/blurtooth/).
