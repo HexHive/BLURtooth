@@ -178,5 +178,5 @@ The major changes between each version are the following:
 | Usenix SEC 2021 | mMMw   | Major revision to reject | [Paper](./21sec.pdf); [Diff](./21sec-diff.pdf); [Revision](./21sec2.pdf) |
 | CCS 2020        | ww     | Early rejected           | [Paper](./20ccs.pdf) |
 
-Scores are as follows: __**A**__ccept; __**m**__inor revision;
-__**M**__ajor revision; *N*eutral; __**w**__eak reject, __**R**__eject
+Scores are as follows: ***A***ccept; ***m***inor revision;
+***M***ajor revision; ***N***eutral; ***w***eak reject, ***R***eject.
