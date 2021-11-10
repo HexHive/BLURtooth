@@ -143,38 +143,40 @@ paper.
 
 The major changes between each version are the following:
 
-* *SP22:* deeper analysis of CTKD issues; explain that we empirically verified
+* **SP22:** deeper analysis of CTKD issues; explain that we empirically verified
   our claims; test mitigations and countermeasures. We did not receive a
   response to our rebuttal.
-* *NDSS22:* Given the lack of response from the CCS21MR, we focused on further
+* **NDSS22:** Given the lack of response from the CCS21MR, we focused on further
   refining the arguments and interacted with the Bluetooth SIG to clarify the
   still existing vulnerabilities. We did not receive a response to our rebuttal.
-* *CCS21MR:* buy and evaluate Bluetooth 5.2 devices (that are still vulnerable)
-  expand and evaluate counter measures; justify why and how the mitigation
-  that was added to the standard in response to our disclosure is incomplete
-  improve presentation and rewrite large parts to clarify as indicated by the
-  reviewers. We did not receive a response to our revised manuscript.
-* *CCS21:* we describe CTKD in non-adversarial settings, reimplement the CTKD
+* **CCS21MR:** buy and evaluate Bluetooth 5.2 devices (that are still
+  vulnerable) expand and evaluate counter measures; justify why and how the
+  mitigation that was added to the standard in response to our disclosure is
+  incomplete improve presentation and rewrite large parts to clarify as
+  indicated by the reviewers. We did not receive a response to our revised
+  manuscript.
+* **CCS21:** we describe CTKD in non-adversarial settings, reimplement the CTKD
   derivation function for further analysis, and simplify the presentation of
   the BLUR attacks.
-* *SEC21MR:* we provide more technical details on the protocols and our reverse
-  engineering efforts; we also extended the discussion on defenses; we
+* **SEC21MR:** we provide more technical details on the protocols and our
+  reverse engineering efforts; we also extended the discussion on defenses; we
   reproduced our attack on 13 devices, including several Bluetooth 5.0 devices
   and one Bluetooth 5.1 device; we were extremely surprised by the rejection
   but, in general, the reviewers wanted deeper and more extensive discussion
   of the causes of the attack, countermeasures, and context of other Bluetooth
   attacks.
-* *SEC21:* we improved the presentation and used the feedback from CCS20 to
+* **SEC21:** we improved the presentation and used the feedback from CCS20 to
   clarify the issues to readers not familiar with the low level details of CTKD.
-* *CCS20:* first version where we described the vulnerabilities and measured on
-  an initial set of devices.
+* **CCS20:** first version where we described the vulnerabilities and measured
+  on an initial set of devices.
 
 | Venue           | Scores | Outcome                  | Response / Changes    |
 |-----------------|--------|--------------------------|-----------------------|
 | Oakland 2022    | AMMR   | Rejected                 | [Paper](./22sp.pdf); [Diff](./22sp-diff.pdf); [Rebuttal](./22sp-rebuttal.md) |
 | NDSS 2022       | MMMwR  | Rejected                 | [Paper](./22ndss.pdf);  |
-| CCS 2021        | NNNw   | Major revision to reject | [Diff to SEC](./21ccs-diff.pdf) [Paper](./21ccs.pdf) [Revision Diff](./21ccs-diff2.pdf) [Revision](./21ccs2.pdf) |
+| CCS 2021        | NNNw   | Major revision to reject | [Diff to SEC](./21ccs-diff.pdf); [Paper](./21ccs.pdf); [Revision Diff](./21ccs-diff2.pdf); [Revision](./21ccs2.pdf) |
 | Usenix SEC 2021 | mMMw   | Major revision to reject | [Paper](./21sec.pdf); [Diff](./21sec-diff.pdf); [Revision](./21sec2.pdf) |
 | CCS 2020        | ww     | Early rejected           | [Paper](./20ccs.pdf) |
 
-Scores are as follows: *A*ccept; *m*inor revision; *M*ajor revision; *N*eutral; *w*eak reject, *R*eject
+Scores are as follows: __**A**__ccept; __**m**__inor revision;
+__**M**__ajor revision; *N*eutral; __**w**__eak reject, __**R**__eject
