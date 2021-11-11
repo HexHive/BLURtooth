@@ -122,12 +122,16 @@ features.
 ## Response from the Bluetooth SIG
 
 At the time of writing, there are *no deployed patches* to address the BLUR
-attacks on actual devices.  The Bluetooth SIG suggested that version 5.1 of the
-standard will contain guidelines to mitigate the BLUR attacks (e.g., disable key
-overwrites in certain circumstances as proposed in our countermeasures), but
-such guidelines are not (yet) public and we cannot comment on them.  The
-Bluetooth SIG provides a [public statement about BLURtooth and the BLUR
+attacks on actual devices.  The Bluetooth SIG suggested that from version 5.1
+onwards, the standard contains measures to mitigate the BLUR attacks (i.e.,
+disable key overwrites in certain circumstances as proposed in our countermeasures).
+The Bluetooth SIG provides a [public statement about BLURtooth and the BLUR
 attacks](https://www.bluetooth.com/learn-about-bluetooth/bluetooth-technology/bluetooth-security/blurtooth/).
+
+As devices with BT 5.1 and later are not widely available yet, we were
+only able to verify this with two BT 5.1 and one BT 5.2 devices. In all
+cases, our attack still works. For more details, see the latest version
+of the paper.
 
 
 ## Publication efforts
