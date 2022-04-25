@@ -32,7 +32,7 @@ establishing unintended BT and BLE sessions as anonymous devices.
   Nils Ole Tippenhauer from Helmholtz Center for Information Security (CISPA),
   and Kasper Rasmussen from University of Oxford.
 * ***Contacts at EPFL:***
-  [Daniele Antonioli and Mathias Payer](mailto:daniele.antonioli@epfl.ch,mathias.payer@nebelwelt.net)
+  [Daniele Antonioli and Mathias Payer](mailto:antonioli.daniele@gmail.com,mathias.payer@nebelwelt.net)
 
 
 ## Summary
@@ -71,9 +71,32 @@ from the Bluetooth SIG.
 
 ## Technical Details
 
-The Bluetooth standard specifies two transports: *Bluetooth Classic (BT)* for high-throughput wireless services and *Bluetooth Low Energy (BLE)* for very low-power scenarios. BT and BLE have dedicated pairing protocols and devices have to pair over BT and BLE to use both securely. In 2014, the Bluetooth standard (v4.2) addressed this usability issue by introducing Cross-Transport Key Derivation (CTKD). CTKD allows establishing BT and BLE pairing keys just by pairing over one of the two transports. While CTKD crosses the security boundary between BT and BLE, little is known about the internals of CTKD and its security implications.
+The Bluetooth standard specifies two transports: *Bluetooth Classic (BT)* for
+high-throughput wireless services and *Bluetooth Low Energy (BLE)* for very
+low-power scenarios. BT and BLE have dedicated pairing protocols and devices
+have to pair over BT and BLE to use both securely. In 2014, the Bluetooth
+standard (v4.2) addressed this usability issue by introducing Cross-Transport
+Key Derivation (CTKD). CTKD allows establishing BT and BLE pairing keys just by
+pairing over one of the two transports. While CTKD crosses the security boundary
+between BT and BLE, little is known about the internals of CTKD and its security
+implications.
 
-In this work, we present the first complete description of CTKD obtained by merging the scattered information from the Bluetooth standard with the results from our reverse-engineering experiments. Then, we perform a security evaluation of CTKD and uncover four cross-transport issues in its specification. We leverage these issues to design four standard-compliant attacks on CTKD enabling new ways to exploit Bluetooth (e.g., exploiting BT and BLE by targeting only one of the two). Our attacks work even if the strongest security mechanism for BT and BLE are in place, including Numeric Comparison and Secure Connections. They allow to impersonate, man-in-the-middle, and establish unintended sessions with arbitrary devices. We refer to our attacks as BLUR attacks, as they blur the security boundary between BT and BLE. We provide a low-cost implementation of the BLUR attacks and we successfully evaluate them on 14 devices with 16 unique Bluetooth chips from popular vendors. We discuss the attacks' root causes and present effective countermeasures to fix them. We disclosed our findings and countermeasures to the Bluetooth SIG in May 2020 (CVE-2020-15802), and we reported additional unmitigated issues in May 2021. 
+In this work, we present the first complete description of CTKD obtained by
+merging the scattered information from the Bluetooth standard with the results
+from our reverse-engineering experiments. Then, we perform a security evaluation
+of CTKD and uncover four cross-transport issues in its specification. We
+leverage these issues to design four standard-compliant attacks on CTKD enabling
+new ways to exploit Bluetooth (e.g., exploiting BT and BLE by targeting only one
+of the two). Our attacks work even if the strongest security mechanism for BT
+and BLE are in place, including Numeric Comparison and Secure Connections. They
+allow to impersonate, man-in-the-middle, and establish unintended sessions with
+arbitrary devices. We refer to our attacks as BLUR attacks, as they blur the
+security boundary between BT and BLE. We provide a low-cost implementation of
+the BLUR attacks and we successfully evaluate them on 14 devices with 16 unique
+Bluetooth chips from popular vendors. We discuss the attacks' root causes and
+present effective countermeasures to fix them. We disclosed our findings and
+countermeasures to the Bluetooth SIG in May 2020 (CVE-2020-15802), and we
+reported additional unmitigated issues in May 2021. 
 
 Those are very serious attacks that violate the security guarantees promised by
 Bluetooth.  We confirmed the feasibility of our attacks by testing them on 16
@@ -82,7 +105,7 @@ vulnerable.
 
 You will find technical details about CTKD, our security analysis, a detailed
 discussion of the threads, a discussion, and potential mitigations in our
-[BLURtooth preprint](https://arxiv.org/abs/2009.11776).
+[paper](./22asiaccs.pdf).
 
 
 ## Disclosure
@@ -147,6 +170,8 @@ paper.
 
 The major changes between each version are the following:
 
+* **AsiaCCS22:** addressed SP22 requests and worked with our AsiaCCS shepherd
+  to address other reviewer concerns.
 * **SP22:** deeper analysis of CTKD issues; explain that we empirically verified
   our claims; test mitigations and countermeasures. We did not receive a
   response to our rebuttal.
@@ -176,6 +201,7 @@ The major changes between each version are the following:
 
 | Venue           | Scores | Outcome                  | Response / Changes    |
 |-----------------|--------|--------------------------|-----------------------|
+| AsiaCCS 2022    | mmw    | Shepherded accept        | [Final Paper](./22asiaccs.pdf) |
 | Oakland 2022    | AMMR   | Rejected                 | [Paper](./22sp.pdf); [Diff](./22sp-diff.pdf); [Rebuttal](./22sp-rebuttal.md) |
 | NDSS 2022       | MMMwR  | Rejected                 | [Paper](./22ndss.pdf);  |
 | CCS 2021        | NNNw   | Major revision to reject | [Diff to SEC](./21ccs-diff.pdf); [Paper](./21ccs.pdf); [Revision Diff](./21ccs-diff2.pdf); [Revision](./21ccs2.pdf) |
